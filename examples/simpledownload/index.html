@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+	<head>
+		<style type="text/css">
+		</style>
+		<!--[if lt IE 9]>
+			<script type="text/javascript">alert("Your browser does not support the canvas tag.");</script>
+		<![endif]-->
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				//download all the images by making a call to the getall.php
+				$.getJSON("../../server/php/getall.php", function(data) {
+					//after we have the result, we make an image element for each, and add it to #content
+					var target = $("#content"); //save our parent target to a var so we don't need to keep looking it up.
+					$.each(data, function(key, val) {
+						$("<img class='uploaded' src='../../server/php/"+val+"'/>").appendTo(target);
+					});
+				});
+
+			});
+		</script>
+
+	</head>
+	<body>
+		<div id="content">
+			<!-- there's nothing in here right now, but after our javascript runs, it'll be populated with <img> elements -->
+		</div>
+	</body>
+</html>
