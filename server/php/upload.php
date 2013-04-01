@@ -1,7 +1,9 @@
 <?php
 
+require('config.php');
+
 $data = $_POST['data'];
-$file = md5(uniqid()) . '.png';
+$file = $IMAGES_DIRECTORY . "/" . md5(uniqid()) . '.png';
 
 // remove "data:image/png;base64,"
 $uri =  substr($data,strpos($data,",")+1);
