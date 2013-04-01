@@ -18,8 +18,13 @@ void draw() {
 
 void mouseClicked() {
   println("Clicked!");
-  upload(this, '../../server/php/upload.php');
+  uploadthis();
+  println("Upload complete");
 }
 
+
+void uploadthis() {
+  upload($p, '../../server/php/upload.php');
+}
 
 

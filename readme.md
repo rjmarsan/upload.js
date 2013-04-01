@@ -10,7 +10,7 @@ include upload.js in your html
 
 call upload(sketch, url) to upload it.
 ```javascript
-upload(this, 'myuploadurl');
+upload($p, 'myuploadurl');
 ```
 
 ## Download Usage
