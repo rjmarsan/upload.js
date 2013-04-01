@@ -18,11 +18,11 @@ upload(this, 'myuploadurl');
 
 ```javascript
 //download all the images by making a call to the getall.php
-$.getJSON("../../server/php/getall.php", function(data) {
+$.getJSON("/path/to/your/php/getall.php", function(data) {
     //after we have the result, we make an image element for each, and add it to #content
     var target = $("#content"); //save our parent target to a var so we don't need to keep looking it up.
     $.each(data, function(key, val) {
-        $("<img class='uploaded' src='../../server/php/"+val+"'/>").appendTo(target);
+        $("<img class='uploaded' src='path/to/your/images/directory/"+val+"'/>").appendTo(target);
     });
 });
 ```
